@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
 import Header from './Components/Header';
-
-function convertUTCDateToLocalDate(date) {
-  var newDate = new Date(date.getTime()+date.getTimezoneOffset()*1000);
-
-  return newDate;   
-}
 
 export const App = () => {
   const [time, setTime] = useState(null);
