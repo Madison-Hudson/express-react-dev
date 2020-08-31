@@ -1,9 +1,9 @@
 const express = require('express');
 const morgan = require('morgan');
-const app = express();
 const PORT = process.env.PORT || 9001;
 const path = require('path');
 const api = require('./routes/api');
+const app = express();
 
 // Middleware:
 process.env.NODE_ENV === 'production'
@@ -23,6 +23,8 @@ app.use(function (req, res) {
   res.status(404).send("That's a 404 folks...");
 });
 
-app.listen(PORT).on('listening', () => {
+const server = app.listen(PORT).on('listening', () => {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+module.exports = server; // Export for testing

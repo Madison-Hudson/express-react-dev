@@ -6,6 +6,6 @@ import App from './App';
 
 test('renders <Header />', () => {
   const { getByText } = render(<App />);
-  const headerElem = getByText(/Welcome to Flask/i);
+  const headerElem = getByText(/Welcome to Express/i);
   expect(headerElem).toBeInTheDocument();
 });
