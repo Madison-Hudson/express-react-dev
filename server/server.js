@@ -6,6 +6,7 @@ const api = require('./routes/api');
 const app = express();
 
 // Middleware:
+/* istanbul ignore next */
 process.env.NODE_ENV === 'production'
   ? app.use(morgan('common'))
   : app.use(morgan('dev'));
